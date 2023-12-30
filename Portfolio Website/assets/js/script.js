@@ -157,3 +157,105 @@ for (let i = 0; i < navigationLinks.length; i++) {
 
   });
 }
+
+
+//image click variables
+const project_images = document.querySelectorAll("img[image_list]");
+var show_image_popup  = document.getElementById("show_image_popup");
+ var large_image  = document.getElementById("large-image");
+ var close_btn = document.getElementById("close-btn");
+// add event to all project images
+for (let i = 0; i < project_images.length; i++) {
+  project_images[i].addEventListener("click", function () {
+  // remove active class from every images
+  for(var j=0; j< project_images.length; j++){
+    project_images[i].classList.remove('active');
+  }
+  this.classList.add('active'); // add active class to this image
+    
+  var src_val = this.src;
+  large_image.src = src_val;
+  showModal();
+
+  });
+}
+function showModal(){
+  show_image_popup.style.display = 'block';
+}
+
+close_btn.addEventListener("click", function(){
+  // before colose the modal we need to remove active class
+  for(var i=0; i< project_images.length; i++){
+    project_images[i].classList.remove('active');
+  }
+  // end
+  closeModal();
+});
+
+function closeModal(){
+  show_image_popup.style.display = 'none';
+}
+//Zoom the photo
+/*
+var small_images  = document.getElementsByClassName("project-img");
+ var show_image_popup  = document.getElementById("show_image_popup");
+ var large_image  = document.getElementById("large-image");
+ var close_btn = document.getElementById("close-btn");
+
+ for(var i=0; i< small_images.length; i++){
+
+   small_images[i].addEventListener("click", function(){
+     // remove active class from every images
+     for(var j=0; j< small_images.length; j++){
+       small_images[j].classList.remove('active');
+     }
+     // end
+ 
+     this.classList.add('active'); // add active class to this image
+    
+     var src_val = this.src;
+     large_image.src = src_val;
+     showModal();
+   });
+ }
+
+
+ function showModal(){
+   show_image_popup.style.display = 'block';
+ }
+
+ close_btn.addEventListener("click", function(){
+   // before colose the modal we need to remove active class
+   for(var i=0; i< small_images.length; i++){
+     small_images[i].classList.remove('active');
+   }
+   // end
+   closeModal();
+ });
+
+ function closeModal(){
+   show_image_popup.style.display = 'none';
+ }
+ */
+// Get the modal
+/*
+var modal = document.getElementById("myModal");
+
+// Get the image and insert it inside the modal - use its "alt" text as a caption
+var img = document.getElementById("myImg");
+var modalImg = document.getElementById("img01");
+var captionText = document.getElementById("caption");
+img.onclick = function(){
+  modal.style.display = "block";
+  modalImg.src = this.src;
+  captionText.innerHTML = this.alt;
+}
+
+// Get the <span> element that closes the modal
+var span = document.getElementsByClassName("close")[0];
+
+// When the user clicks on <span> (x), close the modal
+span.onclick = function() { 
+  modal.style.display = "none";
+}
+*/
