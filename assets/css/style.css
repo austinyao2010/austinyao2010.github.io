@@ -307,7 +307,7 @@ main {
 }
 
 
-
+/*min-width: 259px;*/
 
 
 /*-----------------------------------*\
@@ -1691,7 +1691,7 @@ textarea.form-input::-webkit-resizer { display: none; }
     width: max-content;
     margin: auto;
   }
-
+/*max-content*/
 
 
   /**
@@ -1803,14 +1803,14 @@ textarea.form-input::-webkit-resizer { display: none; }
    */
 
   main {
-    max-width: 1200px;
+    max-width: 1500px;
     margin-inline: auto;
     display: flex;
     justify-content: center;
     align-items: stretch;
     gap: 25px;
   }
-
+/*max-width: 1200px; original*/
   .main-content {
     min-width: 75%;
     width: 75%;
