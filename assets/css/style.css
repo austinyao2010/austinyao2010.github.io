@@ -563,6 +563,7 @@ main {
  */
 
 .testimonials { margin-bottom: 30px; }
+.testimonials .h3 testimonials-title{ word-spacing: 60px;}
 
 .testimonials-title { margin-bottom: 20px; }
 
