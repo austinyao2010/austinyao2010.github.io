@@ -831,8 +831,21 @@ main {
   line-height: 1.6;
 }
 
+.timeline-list .resume-title{
+  font-size: 20px;
+  font-weight: bold;
+  color: white;
+  margin-bottom: 7px;
+}
 
-/**
+.resume-subList {
+  font-size: var(--fs-6) !important;;
+  list-style-type: circle;
+  color:#f7f7f7;
+  margin-left: 2%;
+}
+
+/** .timeline .timeline-list .timeline-item .timeline-text .resume-list 
  * skills 
  */
 
