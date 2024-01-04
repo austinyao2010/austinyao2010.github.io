@@ -1901,11 +1901,15 @@ textarea.form-input::-webkit-resizer { display: none; }
 /*Zoom in the pictures*/
 .myImg{
   position: relative;
-  width: 100%;
-  height: 200px;
+  width: 320px;
+  height: 240px;
   border-radius: 16px;
   overflow: hidden;
   margin-bottom: 15px;
+  object-fit: scale-down;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
   /*
   display: inline-block;
   cursor: pointer;
