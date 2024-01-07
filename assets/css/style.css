@@ -8,7 +8,7 @@
  */
 
 .resume-list{
-  color:white
+  color: var(--light-gray);
 }
 
 
