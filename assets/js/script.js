@@ -174,9 +174,17 @@ function loadDataPage(pageId) {
 }
 
 // Handle initial page load
-if (window.location.hash) {
-  loadDataPage(window.location.hash.substring(1));
+// Handle initial page load
+function handleInitialLoad() {
+  let pageId = window.location.hash.substring(1);
+  if (!pageId) {
+      pageId = 'about';
+      history.replaceState({ page: 'about' }, '', '#about');
+  }
+  loadDataPage(pageId);
 }
+
+handleInitialLoad();
 
 // page navigation variables
 const navigationLinks = document.querySelectorAll("[data-nav-link]");
