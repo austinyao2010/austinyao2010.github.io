@@ -157,7 +157,18 @@ for (let i = 0; i < navigationLinks.length; i++) {
 
   });
 }
+//overview link
 
+document.querySelectorAll('.internal-link').forEach(link => {
+  link.addEventListener('click', function(e) {
+      e.preventDefault();
+      const page = this.getAttribute('href').substring(1);
+      document.querySelectorAll("[data-page]").forEach(p => {
+          p.classList.remove('active');
+      });
+      document.querySelector(`[data-page="${page}"]`).classList.add('active');
+  });
+});
 
 //image click variables
 const project_images = document.querySelectorAll("img[image_list]");
