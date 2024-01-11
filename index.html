@@ -6,7 +6,10 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Austin Yao - Portfolio Website</title>
-
+  <style>
+    .page { display: none; }
+    .active { display: block; }
+  </style>
   <!--
     - favicon
   -->
@@ -134,15 +137,15 @@
         <ul class="navbar-list">
 
           <li class="navbar-item">
-            <button class="navbar-link  active" data-nav-link>About</button>
+            <button class="navbar-link  active" data-nav-link onclick="changeDataPage('about'); return false;">About</button>
           </li>
 
           <li class="navbar-item">
-            <button class="navbar-link" data-nav-link>Resume</button>
+            <button class="navbar-link" data-nav-link onclick="changeDataPage('resume'); return false;">Resume</button>
           </li>
           
           <li class="navbar-item">
-            <button class="navbar-link" data-nav-link>Profile</button>
+            <button class="navbar-link" data-nav-link onclick="changeDataPage('profile'); return false;">Profile</button>
           </li>
           <!--
           <li class="navbar-item">
@@ -150,7 +153,7 @@
           </li>
           -->
           <li class="navbar-item">
-            <button class="navbar-link" data-nav-link>Contact</button>
+            <button class="navbar-link" data-nav-link onclick="changeDataPage('contact'); return false;">Contact</button>
           </li>
 
         </ul>
@@ -195,7 +198,7 @@
               <div class="service-icon-box">
                 <img src="./assets/images/community_service.jpg" alt="camera icon" width="60" height="60">
               </div>
-              <a href="#profile" class="internal-link">
+              <a href="#profile" class="internal-link" onclick="changeDataPage('about'); return false;">
               <div class="service-content-box">
                 <h4 class="h4 service-item-title">Community Service</h4>
                 
@@ -214,7 +217,7 @@
               <div class="service-icon-box">
                 <img src="./assets/images/music.jpg" alt="mobile app icon" width="60" height="60">
               </div>
-              <a href="#profile" class="internal-link">
+              <a href="#profile" class="internal-link" onclick="changeDataPage('about'); return false;">
               <div class="service-content-box">
                 <h4 class="h4 service-item-title">Performing Arts</h4>
                 
@@ -233,7 +236,7 @@
               <div class="service-icon-box">
                 <img src="./assets/images/sports.jpg" alt="Web development icon" width="60" height="60">
               </div>
-              <a href="#profile" class="internal-link">
+              <a href="#profile" class="internal-link" onclick="changeDataPage('about'); return false;">
               <div class="service-content-box">
                 <h4 class="h4 service-item-title">Sports</h4>
                 
@@ -252,7 +255,7 @@
               <div class="service-icon-box">
                 <img src="./assets/images/Academics.jpg " alt="design icon" width="60" height="60">
               </div>
-              <a href="#profile" class="internal-link">
+              <a href="#profile" class="internal-link" onclick="changeDataPage('about'); return false;">
               <div class="service-content-box">
                 <h4 class="h4 service-item-title">Academics</h4>
                 
